@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Book Appointment | Gents Salon & Spa</title>
+    <meta name="description"
+        content="Request an appointment at Gents Salon & Spa. Premium men's grooming and relaxation.">
+    <link rel="shortcut icon" href="assets/images/logo3.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Barlow:wght@400&family=Gilda+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/salon-custom.css" />
+</head>
+
+<body>
+
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="logo" href="index.html"> <img src="assets/images/logo3.png" class="logo-img" alt=""> </a>
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="ti-menu"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Banner -->
+    <div class="banner-header section-padding valign bg-img bg-fixed" data-overlay-dark="5"
+        data-background="assets/images/working-hour-2.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-left caption">
+                    <h5>Reserve a spot</h5>
+                    <h1>Book Appointment</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Booking Form -->
+    <section class="section-padding bg-cream">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-60 animate-box" data-animate-effect="fadeInUp">
+                    <div class="section-subtitle">Gents Salon & Spa</div>
+                    <div class="section-title">Request a Session</div>
+                    <p>Experience grooming excellence. Please provide your preferred services and time, and
+                        our team will contact you for confirmation.</p>
+                    <div class="reservations mb-30">
+                        <div class="icon"><span class="flaticon flaticon-call"></span></div>
+                        <div class="text">
+                            <p>Reach us:</p> <a href="tel:+2347077195098">+234 707 719 5098</a>
+                        </div>
+                    </div>
+                    <p><i class="ti-check"></i><small> Professional consultation included.</small></p>
+                    <p><i class="ti-check"></i><small> Relaxing premium environment.</small></p>
+                </div>
+                <div class="col-md-5 mb-30 offset-md-1 animate-box" data-animate-effect="fadeInUp">
+                    <div class="booking-box">
+                        <div class="head-box text-center">
+                            <h6>Appointments</h6>
+                            <h4>Booking Form</h4>
+                        </div>
+                        <div class="booking-inner clearfix">
+                            <div id="form-message" class="alert d-none" role="alert" aria-live="polite"></div>
+                            <form id="booking-form" action="api/send-booking.php" method="post" class="form1 clearfix">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="input1_wrapper">
+                                            <label for="name">Full Name *</label>
+                                            <div class="input1_inner">
+                                                <input id="name" name="name" type="text" class="form-control input"
+                                                    placeholder="Full Name" required>
+                                            </div>
+                                            <span class="text-danger small" id="name-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input1_wrapper">
+                                            <label for="email">Email Address *</label>
+                                            <div class="input1_inner">
+                                                <input id="email" name="email" type="email" class="form-control input"
+                                                    placeholder="you@example.com" required>
+                                            </div>
+                                            <span class="text-danger small" id="email-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input1_wrapper">
+                                            <label for="phone">Phone Number *</label>
+                                            <div class="input1_inner">
+                                                <input id="phone" name="phone" type="text" class="form-control input"
+                                                    placeholder="Phone Number" required>
+                                            </div>
+                                            <span class="text-danger small" id="phone-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="select1_wrapper">
+                                            <label for="service">Service *</label>
+                                            <div class="select1_inner">
+                                                <select id="service" name="service" class="select2 select"
+                                                    style="width: 100%" required>
+                                                    <option value="">Select Service</option>
+                                                    <option value="Haircuts & Styling">Haircuts & Styling</option>
+                                                    <option value="Beard Grooming">Beard Grooming</option>
+                                                    <option value="Luxury Shaves">Luxury Shaves</option>
+                                                    <option value="Hair Treatments">Hair Treatments</option>
+                                                    <option value="Line-Ups">Line-Ups</option>
+                                                    <option value="Spa & Relaxation">Spa & Relaxation</option>
+                                                </select>
+                                            </div>
+                                            <span class="text-danger small" id="service-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input1_wrapper">
+                                            <label for="date">Date *</label>
+                                            <div class="input1_inner">
+                                                <input id="date" name="date" type="text"
+                                                    class="form-control input datepicker" placeholder="Select Date"
+                                                    required>
+                                            </div>
+                                            <span class="text-danger small" id="date-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input1_wrapper">
+                                            <label for="time">Time *</label>
+                                            <div class="input1_inner">
+                                                <input id="time" name="time" type="text" class="form-control input"
+                                                    placeholder="e.g. 2:00 PM" required>
+                                            </div>
+                                            <span class="text-danger small" id="time-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input1_wrapper">
+                                            <label for="notes">Additional Notes</label>
+                                            <div class="input1_inner">
+                                                <textarea id="notes" name="notes" class="form-control input"
+                                                    placeholder="Anything we should know?" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn-form1-submit mt-15">Request
+                                            Appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-column footer-about">
+                            <h3 class="footer-title">About Salon</h3>
+                            <p class="footer-about-text">Gents Salon & Spa is the ultimate destination for luxury
+                                grooming. We blend traditional craftsmanship with contemporary style to help you look
+                                and feel your absolute best.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1">
+                        <div class="footer-column footer-explore clearfix">
+                            <h3 class="footer-title">Quick Links</h3>
+                            <ul class="footer-explore-list list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="booking.html">Booking</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-column footer-contact">
+                            <h3 class="footer-title">Contact</h3>
+                            <p class="footer-contact-text">3rd floor, Opposite Cathedral of St. Peter Ang. Sec. Sch,
+                                Along Oba Ademola Maternity Hospital, Ake, Abeokuta.</p>
+                            <div class="footer-contact-info">
+                                <p class="footer-contact-phone"><span class="flaticon flaticon-call"></span> +234 707
+                                    719 5098
+                                </p>
+                                <p class="footer-contact-mail">hello@altair-attic.com</p>
+                            </div>
+                            <div class="footer-about-social-list">
+                                <a href="#"><i class="ti-instagram"></i></a>
+                                <a href="#"><i class="ti-twitter"></i></a>
+                                <a href="#"><i class="ti-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-bottom-inner">
+                            <p class="footer-bottom-copy-right">&copy; 2026 Gents Salon & Spa. All rights reserved. |
+                                Site by Altair Attic limited
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.5.0.min.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.isotope.v3.0.2.js"></script>
+    <script src="assets/js/pace.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/scrollIt.min.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.stellar.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/YouTubePopUp.js"></script>
+    <script src="assets/js/select2.js"></script>
+    <script src="assets/js/datepicker.js"></script>
+    <script src="assets/js/smooth-scroll.min.js"></script>
+    <script src="assets/js/booking.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

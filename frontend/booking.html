@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Beauty Salon – Book an appointment">
+	<title>Book an Appointment | Beauty Salon</title>
+	<link rel="shortcut icon" type="image/png" href="assets/images/logo3.png">
+
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Barlow:wght@400&family=Gilda+Display&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/fonts/flaticon.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="assets/css/odometer.css">
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/template-custom.css">
+</head>
+
+<body class="bg-light">
+	<!-- header ======================-->
+	<header class="header-section sticky-navbar">
+		<nav class="navbar navbar-expand-xl">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="assets/images/logo3.png" alt="Gents Salon & Spa" class="site-logo-header hero-logo-white">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+						<li class="nav-item"><a class="nav-link" href="services.html">SERVICES</a></li>
+						<li class="nav-item"><a class="nav-link active" href="booking.html">BOOK</a></li>
+						<li class="nav-item"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+					</ul>
+					<div class="ms-xl-4">
+						<a href="booking.html" class="btn btn-primary">Book Now</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- banner-section ======================-->
+	<section class="banner-section"
+		style="background-image: url('assets/images/slider/slider3.jpg'); background-position: center; background-size: cover; padding: 150px 0 100px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="section-subtitle" style="color: #fff;">Reservations</div>
+					<h1 class="text-white" style="font-family: 'Gilda Display', serif;">Book Appointment</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-padding bg-cream">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8 text-center mb-50">
+					<div class="section-subtitle">Gents Salon & Spa</div>
+					<h2 class="section-title">Request a Session</h2>
+					<p>Experience grooming excellence in Abeokuta. Please provide your preferred services and
+						time, and
+						our team will contact you for confirmation.</p>
+				</div>
+			</div>
+			<div id="form-message" class="alert d-none" role="alert" aria-live="polite"></div>
+			<form id="booking-form" action="api/send-booking.php" method="post" novalidate>
+				<div class="contact-form">
+					<div class="row gx-4 gy-30">
+						<div class="col-lg-6">
+							<label for="name" class="form-label">Full name *</label>
+							<input type="text" class="form-control" id="name" name="name" required
+								placeholder="Your name">
+							<span class="text-danger small" id="name-error"></span>
+						</div>
+						<div class="col-lg-6">
+							<label for="email" class="form-label">Email *</label>
+							<input type="email" class="form-control" id="email" name="email" required
+								placeholder="you@example.com">
+							<span class="text-danger small" id="email-error"></span>
+						</div>
+						<div class="col-lg-6">
+							<label for="phone" class="form-label">Phone *</label>
+							<input type="tel" class="form-control" id="phone" name="phone" required
+								placeholder="(555) 000-0000">
+							<span class="text-danger small" id="phone-error"></span>
+						</div>
+						<div class="col-lg-6">
+							<label for="service" class="form-label">Service *</label>
+							<select class="form-control form-select" id="service" name="service" required>
+								<option value="">Select a service</option>
+								<option value="Haircuts & Styling">Haircuts & Styling</option>
+								<option value="Beard Grooming">Beard Grooming</option>
+								<option value="Luxury Shaves">Luxury Shaves</option>
+								<option value="Hair Treatments">Hair Treatments</option>
+								<option value="Line-Ups">Line-Ups</option>
+								<option value="Spa & Relaxation">Spa & Relaxation</option>
+							</select>
+							<span class="text-danger small" id="service-error"></span>
+						</div>
+						<div class="col-lg-6">
+							<label for="date" class="form-label">Preferred date *</label>
+							<input type="date" class="form-control" id="date" name="date" required>
+							<span class="text-danger small" id="date-error"></span>
+						</div>
+						<div class="col-lg-6">
+							<label for="time" class="form-label">Preferred time *</label>
+							<input type="time" class="form-control" id="time" name="time" required>
+							<span class="text-danger small" id="time-error"></span>
+						</div>
+						<div class="col-12">
+							<label for="notes" class="form-label">Additional notes</label>
+							<textarea class="form-control text-area" id="notes" name="notes" rows="4"
+								placeholder="Anything we should know?"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="text-center mt-4">
+					<button type="submit" class="btn btn-primary">Submit Booking</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<!-- footer section ======================-->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 mb-30">
+					<div class="footer-title">About Salon</div>
+					<p>Experience the precision that successful gentlemen in Abeokuta trust. Gents Salon & Spa
+						is your
+						destination for premium grooming and relaxation.</p>
+					<div class="social-flex">
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+					</div>
+				</div>
+				<div class="col-md-4 mb-30 px-lg-5">
+					<div class="footer-title">Quick Links</div>
+					<ul class="list-unstyled">
+						<li><a href="index.html" class="text-white text-decoration-none d-block mb-2">Home</a>
+						</li>
+						<li><a href="services.html" class="text-white text-decoration-none d-block mb-2">Services</a>
+						</li>
+						<li><a href="booking.html" class="text-white text-decoration-none d-block mb-2">Book
+								Appointment</a></li>
+						<li><a href="contact.html" class="text-white text-decoration-none d-block mb-2">Contact
+								Us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-4 mb-30">
+					<div class="footer-title">Contact Us</div>
+					<p>34, Stadium Road, Kuto, Abeokuta, Ogun State</p>
+					<p>Phone: +234 707 719 5098</p>
+					<p>Email: info@gentssalonspa.com</p>
+				</div>
+			</div>
+			<div class="row mt-50 border-top pt-30">
+				<div class="col-md-12 text-center text-secondary">
+					&copy; 2026 Gents Salon & Spa. All Rights Reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Sticky Booking Button ======================-->
+	<a href="booking.html" class="sticky-booking-btn" aria-label="book-now">
+		<i class="fa-solid fa-calendar-check"></i>
+	</a>
+	<!-- Sticky Booking Button ======================-->
+
+	<!-- Back to top ======================-->
+	<a href="#" class="back-to-top fixed-bottom" aria-label="back-to-top"><span class="visually-hidden">Back to
+			Top</span></a>
+	<!-- Back to top ======================-->
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+	<script src="assets/js/booking.js"></script>
+	<script type="text/javascript" src="assets/js/contact-form.js"></script>
+</body>
+
+</html>

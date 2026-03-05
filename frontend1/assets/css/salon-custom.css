@@ -1,0 +1,517 @@
+/* Salon Luxury Branding Overlay */
+
+/* Use Gold tone for primary color */
+:root {
+    --primary: #aa8453;
+    --dark: #1b1b1b;
+    --gold: #d4af37;
+}
+
+body {
+    background-color: #f8f5f0;
+}
+
+.section-subtitle {
+    color: var(--primary) !important;
+    font-weight: 400 !important;
+    letter-spacing: 5px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 10px !important;
+}
+
+.section-title {
+    font-size: 45px !important;
+    color: #222 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Navbar adjustment */
+.navbar {
+    padding: 20px 0 !important;
+}
+
+/* Logo color and size adjustments */
+.logo-img {
+    transition: all 0.3s ease-in-out;
+    width: 100px !important;
+    padding: 15px 0 !important;
+    height: auto !important;
+    display: block;
+}
+
+.navbar:not(.nav-scroll) .logo-img {
+    filter: brightness(0) invert(1);
+}
+
+.navbar.nav-scroll .logo-img {
+    filter: none;
+    width: 100px !important;
+    padding: 10px 0 !important;
+}
+
+/* Fix mobile navbar alignment (centered logo and menu) */
+@media (max-width: 991px) {
+    .navbar .container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 10px !important;
+        height: auto !important;
+    }
+
+    .logo-wrapper {
+        padding: 0 !important;
+        margin: 0 !important;
+        float: none !important;
+    }
+
+    .navbar-toggler {
+        margin: 0 !important;
+        padding: 7px 0 !important;
+        border: none !important;
+        outline: none !important;
+        background: transparent !important;
+    }
+
+    .nav-scroll .logo-wrapper {
+        padding: 0 !important;
+    }
+
+    .navbar.nav-scroll {
+        height: auto !important;
+        padding: 7px 0 !important;
+    }
+
+    .navbar-toggler i {
+        color: #fff !important;
+        font-size: 24px !important;
+    }
+
+    .nav-scroll .navbar-toggler i {
+        color: var(--primary) !important;
+    }
+}
+
+/* Hero Slider Text Styling */
+.caption h4 {
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-size: 18px !important;
+    letter-spacing: 5px !important;
+    color: var(--primary) !important;
+    text-transform: uppercase !important;
+    margin-bottom: 15px !important;
+}
+
+.caption h1 {
+    font-size: 70px !important;
+    line-height: 1.1em !important;
+    margin-bottom: 30px !important;
+    color: #fff !important;
+}
+
+/* Services pricing cards */
+.pricing-card .amount {
+    font-family: 'Gilda Display', serif !important;
+    color: var(--primary) !important;
+    font-size: 24px !important;
+}
+
+/* Footer adjustments */
+.footer {
+    background: #1b1b1b !important;
+    color: #ccc !important;
+}
+
+.footer-contact-info p,
+.footer-about-text,
+.footer-explore-list li a {
+    color: #ccc !important;
+}
+
+.footer-title {
+    color: #fff !important;
+    font-family: 'Gilda Display', serif !important;
+}
+
+.footer-about-social-list a i {
+    color: #fff !important;
+}
+
+/* Image hover effects */
+.gallery-box {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-img img {
+    transition: transform 0.8s;
+}
+
+.gallery-box:hover .gallery-img img {
+    transform: scale(1.1);
+}
+
+/* Color Overrides for Readability */
+.bg-cream {
+    background-color: #f8f5f0 !important;
+}
+
+.bg-cream p {
+    color: #444 !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.section-subtitle {
+    font-weight: 500 !important;
+}
+
+/* Adjust footer social icons */
+.footer-about-social-list a i {
+    color: var(--primary) !important;
+}
+
+.footer-about-social-list a:hover i {
+    color: #fff !important;
+}
+
+/* Fix Hero Text shadow for better visibility on bright slides */
+.caption h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+.caption h5 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Pricing Card Shadow */
+.pricing-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Fix spacing for footer titles */
+.footer-title {
+    margin-bottom: 25px !important;
+    font-weight: 500 !important;
+}
+
+.caption p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    color: #eee !important;
+}
+
+/* About Section Image Scaling */
+.about-img-container {
+    height: 100%;
+    min-height: 500px;
+    /* Ensures a good height on larger screens */
+}
+
+.about-img-container .gallery-img {
+    height: 100%;
+}
+
+.about-img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    .about-img-container {
+        min-height: 300px;
+    }
+}
+
+/* Testimonials Styling */
+.testimonials .item {
+    padding: 20px;
+}
+
+.testimonials .clients img {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 20px;
+    background: transparent !important;
+}
+
+.testimonials p {
+    font-size: 20px !important;
+    line-height: 1.8em !important;
+    font-style: italic;
+    color: #444 !important;
+    margin-bottom: 30px !important;
+}
+
+.testimonials .info {
+    text-align: center;
+    width: 100%;
+}
+
+.testimonials .info .cont {
+    display: block;
+}
+
+.testimonials .info h6 {
+    font-size: 18px !important;
+    margin-bottom: 0px !important;
+    color: var(--dark) !important;
+    font-weight: 500 !important;
+    text-align: center;
+}
+
+.testimonials .star-rating {
+    color: var(--gold) !important;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Pricing Card Refinement */
+.pricing-card {
+    display: flex !important;
+    flex-direction: row !important;
+    background: #fff !important;
+    overflow: hidden;
+    height: 100%;
+}
+
+.pricing-card img {
+    width: 40% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+.pricing-card .desc {
+    width: 60% !important;
+    padding: 30px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .pricing-card {
+        flex-direction: column !important;
+    }
+
+    .pricing-card img {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .pricing-card .desc {
+        width: 100% !important;
+    }
+}
+
+/* Symmetry and Spacing Consistency */
+.section-padding {
+    padding: 100px 0 !important;
+    /* Reduced from 120px for better flow */
+}
+
+/* Tighten gap between Testimonials and Signature Services */
+.testimonials.section-padding {
+    padding-bottom: 60px !important;
+}
+
+.rooms1.section-padding {
+    padding-top: 60px !important;
+}
+
+/* Normalize Header Banners (Remove asymmetric mt-90) */
+.banner-header .caption {
+    margin-top: 0 !important;
+}
+
+/* Normalize Testimonial Box Margin */
+.testimonials-box {
+    margin-bottom: 0 !important;
+}
+
+/* Normalize Footer Top Padding to match Section Standard */
+.footer-top {
+    padding: 100px 0 !important;
+}
+
+/* Ensure Row-level columns don't add extra bottom margin to sections */
+@media (min-width: 768px) {
+
+    section .row:last-child [class*="col-"].mb-30,
+    section .row:last-child [class*="col-"].mb-60 {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Services Page - Height Normalization (Content-Driven) */
+.services .row {
+    display: flex;
+    align-items: stretch;
+}
+
+@media (min-width: 768px) {
+
+    /* Make columns relative to allow absolute filling for images */
+    .services .col-md-6 {
+        position: relative;
+    }
+
+    .services .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .services .img img {
+        position: absolute;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center;
+    }
+
+    /* Content column with light background - drives the row height */
+    .services .bg-cream {
+        padding: 60px 45px !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Mobile Stacking View */
+@media (max-width: 767px) {
+    .services .img {
+        height: 250px !important;
+    }
+
+    .services .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .services .bg-cream {
+        padding: 40px 25px !important;
+        height: auto !important;
+    }
+}
+
+/* Mobile Responsiveness & Layout Fixes */
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 35px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .caption h1 {
+        font-size: 50px !important;
+    }
+
+    .navbar {
+        padding: 10px 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 60px 0 !important;
+    }
+
+    .section-subtitle {
+        letter-spacing: 3px !important;
+        font-size: 13px !important;
+    }
+
+    .section-title {
+        font-size: 30px !important;
+    }
+
+    .caption h1 {
+        font-size: 35px !important;
+        margin-bottom: 20px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .caption h4 {
+        font-size: 14px !important;
+        letter-spacing: 3px !important;
+    }
+
+    .butn-light a {
+        padding: 12px 25px !important;
+        font-size: 12px !important;
+    }
+
+    /* Fix facts section icons and text */
+    .section-padding.bg-fixed h2.section-title {
+        font-size: 32px !important;
+    }
+
+    /* Testimonials text size */
+    .testimonials p {
+        font-size: 16px !important;
+        line-height: 1.6em !important;
+    }
+
+    /* Footer adjustments for mobile */
+    .footer-top {
+        padding: 60px 0 !important;
+    }
+
+    .footer-column {
+        margin-bottom: 40px;
+    }
+
+    .footer-column:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Working hours stacking */
+    .working-hours .col-6 {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    /* Logo size on mobile */
+    .logo-img {
+        width: 75px !important;
+    }
+
+    /* Slider buttons centering */
+    .slider-fade .owl-item .caption {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 26px !important;
+    }
+
+    .caption h1 {
+        font-size: 28px !important;
+    }
+
+    /* Reservation box on slider */
+    .reservation {
+        display: none !important;
+        /* Hide on very small screens to avoid clutter */
+    }
+
+    .butn-light a span {
+        font-size: 11px !important;
+    }
+
+    .gallery-item {
+        margin-bottom: 20px;
+    }
+}
