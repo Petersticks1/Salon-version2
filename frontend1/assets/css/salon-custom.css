@@ -27,14 +27,14 @@ body {
 
 /* Navbar adjustment */
 .navbar {
-    padding: 20px 0 !important;
+    padding: 10px 0 !important;
 }
 
 /* Logo color and size adjustments */
 .logo-img {
     transition: all 0.3s ease-in-out;
-    width: 100px !important;
-    padding: 15px 0 !important;
+    width: 90px !important;
+    padding: 5px 0 !important;
     height: auto !important;
     display: block;
 }
@@ -45,8 +45,8 @@ body {
 
 .navbar.nav-scroll .logo-img {
     filter: none;
-    width: 100px !important;
-    padding: 10px 0 !important;
+    width: 80px !important;
+    padding: 5px 0 !important;
 }
 
 /* Fix mobile navbar alignment (centered logo and menu) */
@@ -79,7 +79,7 @@ body {
 
     .navbar.nav-scroll {
         height: auto !important;
-        padding: 7px 0 !important;
+        padding: 5px 0 !important;
     }
 
     .navbar-toggler i {
@@ -417,7 +417,7 @@ body {
     }
 
     .navbar {
-        padding: 10px 0 !important;
+        padding: 5px 0 !important;
     }
 }
 
@@ -483,7 +483,8 @@ body {
 
     /* Logo size on mobile */
     .logo-img {
-        width: 75px !important;
+        width: 55px !important;
+        padding: 5px 0 !important;
     }
 
     /* Slider buttons centering */
