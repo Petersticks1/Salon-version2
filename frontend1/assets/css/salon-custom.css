@@ -30,6 +30,12 @@ body {
     padding: 10px 0 !important;
 }
 
+.nav-scroll {
+    background-color: #f8f5f0 !important;
+    /* Matches site bg color globally */
+    box-shadow: none !important;
+}
+
 /* Logo color and size adjustments */
 .logo-img {
     transition: all 0.3s ease-in-out;
@@ -80,6 +86,9 @@ body {
     .navbar.nav-scroll {
         height: auto !important;
         padding: 5px 0 !important;
+        background-color: #f8f5f0 !important;
+        /* Matches site bg color */
+        box-shadow: none !important;
     }
 
     .navbar-toggler i {
@@ -402,6 +411,19 @@ body {
     .services .bg-cream {
         padding: 40px 25px !important;
         height: auto !important;
+    }
+
+    /* Fix row overflow caused by negative margins and large inner images */
+    .services .row,
+    .about .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .gallery-img,
+    .about-img-container {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
